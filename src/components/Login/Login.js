@@ -50,7 +50,7 @@ const Login = () => {
             </form>
                     </div>
                     <div className="col-md-6">
-                        <img src={img} alt="" />
+                        <img className="img-fluid" src={img} alt="" />
                     </div>
 
                 </div>
