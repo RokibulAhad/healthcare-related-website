@@ -12,10 +12,11 @@ import Details from './components/Details/Details';
 import Login from './components/Login/Login';
 import AuthProvider from './components/contexts/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
-import Footer from './Footer/Footer';
-import AboutUs from './AboutUs/AboutUs';
-import Privacy from './Privacy/Privacy';
-import ServiceDetails from './ServiceDetails/ServiceDetails';
+import Footer from './components/Footer/Footer';
+import AboutUs from './components/AboutUs/AboutUs';
+import Privacy from './components/Privacy/Privacy';
+import ServiceDetails from './components/ServiceDetails/ServiceDetails';
+
 
 
 function App() {

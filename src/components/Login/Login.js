@@ -1,7 +1,7 @@
 import React from 'react';
 import useAuth from '../hooks/useAuth';
 import './Login.css';
-import img from '../../images/istockphoto-1189304032-612x612.jpg'
+import img from '../../images/login.jpg'
 
 const Login = () => {
     const {signInWithGoogle, handleRegistration,handleEmailChange,handlePasswordChange,error,toggolLogin,isLogin,handleNameChange} = useAuth();
