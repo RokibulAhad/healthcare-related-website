@@ -2,9 +2,30 @@ import React from 'react';
 import useAuth from '../hooks/useAuth';
 import './Login.css';
 import img from '../../images/login.jpg'
+import { useHistory, useLocation } from 'react-router';
 
 const Login = () => {
     const {signInWithGoogle, handleRegistration,handleEmailChange,handlePasswordChange,error,toggolLogin,isLogin,handleNameChange} = useAuth();
+    
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_uri = location.state?.from || '/home'
+    console.log('came form', location.state?.from);
+
+
+    const GoogleLoginRedirect = () => {
+        signInWithGoogle()
+            .then(result => {
+                history.push(redirect_uri)
+
+            })
+
+    }
+
+
+
+
+
     return (
         <div>
             <div className="container">
@@ -46,7 +67,7 @@ const Login = () => {
                 </div>
                 <button type="submit" className="g-button">{isLogin? "Login": "Register"}</button>
                 <br />
-                <button onClick={signInWithGoogle} className="mt-2 g-button">sign in with google</button>
+                <button onClick={GoogleLoginRedirect} className="mt-2 g-button">sign in with google</button>
             </form>
                     </div>
                     <div className="col-md-6">
