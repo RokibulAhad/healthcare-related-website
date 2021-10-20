@@ -5,7 +5,10 @@ import img from '../../images/login.jpg'
 import { useHistory, useLocation } from 'react-router';
 
 const Login = () => {
-    const {signInWithGoogle, handleRegistration,handleEmailChange,handlePasswordChange,error,toggolLogin,isLogin,handleNameChange} = useAuth();
+    const {signInWithGoogle, handleRegistration,handleEmailChange,handlePasswordChange,error,toggolLogin,isLogin,handleNameChange,signInWithEmailAndPassword,auth,
+        email, password} = useAuth();
+
+
     
     const location = useLocation();
     const history = useHistory();
@@ -21,10 +24,6 @@ const Login = () => {
             })
 
     }
-
-
-
-
 
     return (
         <div>

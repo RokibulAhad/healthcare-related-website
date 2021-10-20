@@ -1,5 +1,6 @@
 import { getAuth, signInWithPopup, GoogleAuthProvider,signOut,onAuthStateChanged,createUserWithEmailAndPassword,signInWithEmailAndPassword,updateProfile } from "firebase/auth";
 import { useEffect, useState } from "react";
+import { useHistory, useLocation } from "react-router";
 import initializeFirebase from "../Login/firebase/firebase.init";
 
 initializeFirebase();
@@ -64,13 +65,13 @@ const useFirebase = () =>{
             createNewUser(email, password)
         }
     }
-
+    
     const processLogin = (email, password) =>{
         signInWithEmailAndPassword(auth, email, password)
-            .then(result => {
+            .then(result => {                
                 const user = result.user
                 console.log(user);
-                setUser(user)
+                setUser(user)                
                 setError('')
                 setUserName()
                 
@@ -125,7 +126,11 @@ const useFirebase = () =>{
         handleNameChange,
         name,
         setUserName,
-        isLoading     
+        isLoading,
+        signInWithEmailAndPassword,
+        auth,
+        email,
+        password
         
     }
 }
