@@ -15,6 +15,7 @@ import PrivateRoute from './PrivateRoute/PrivateRoute';
 import Footer from './Footer/Footer';
 import AboutUs from './AboutUs/AboutUs';
 import Privacy from './Privacy/Privacy';
+import ServiceDetails from './ServiceDetails/ServiceDetails';
 
 
 function App() {
@@ -30,6 +31,9 @@ function App() {
           <Route path="/home">
             <Home></Home>
           </Route>
+          <PrivateRoute path="/service">
+            <ServiceDetails></ServiceDetails>
+          </PrivateRoute>
           <Route path="/about">
             <AboutUs></AboutUs>
           </Route>

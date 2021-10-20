@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Service.css'
+import './SingleService.css'
 
-const Service = (props) => {
+const SingleService = (props) => {
     const {key,name,img,description} = props.service
     return (
         <div >
@@ -23,4 +23,4 @@ const Service = (props) => {
     );
 };
 
-export default Service;
+export default SingleService;
